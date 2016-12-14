@@ -7,25 +7,11 @@
     <meta name="description" content="Artem Rosnovskiy's website">
     <meta name="author" content="Artem Rosnovskiy">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="//fonts.googleapis.com/css?family=Anonymous+Pro:400,300,600" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Anonymous+Pro:400,300,600" rel="stylesheet" type="text/css">  
     <script type="text/javascript">
-  !function(name,path,ctx){
-    var latest,prev=name!=='Keen'&&window.Keen?window.Keen:false;ctx[name]=ctx[name]||{ready:function(fn){var h=document.getElementsByTagName('head')[0],s=document.createElement('script'),w=window,loaded;s.onload=s.onerror=s.onreadystatechange=function(){if((s.readyState&&!(/^c|loade/.test(s.readyState)))||loaded){return}s.onload=s.onreadystatechange=null;loaded=1;latest=w.Keen;if(prev){w.Keen=prev}else{try{delete w.Keen}catch(e){w.Keen=void 0}}ctx[name]=latest;ctx[name].ready(fn)};s.async=1;s.src=path;h.parentNode.insertBefore(s,h)}}
-  }('KeenAsync','https://d26b395fwzu5fz.cloudfront.net/keen-tracking-1.0.3.min.js',this);
-
-  KeenAsync.ready(function(){
-    // Configure a client instance
-    var client = new KeenAsync({
-      projectId: '5850c6758db53dfda8a7be8b',
-      writeKey: 'CD119A85F917A5A0D6FDE1DA11A01BBA34684F54FB43FE2428830CC4ED0CD56472403F045DB915AB2EDCEE850FD8933DED249E52012DD70B9DC74481D20013C3FEC70CA5A6A999315E11C86AEC3DA2590CBF201E2221EB3F017A972C7C48D391'
-    });
-
-    // Record an event
-    client.recordEvent('pageviews', {
-      title: document.title
-    });
-  });
-</script>
+    function createKeenWebAutoCollector(){window.keenWebAutoCollector=window.KeenWebAutoCollector.create({projectId:'5850c6758db53dfda8a7be8b',writeKey:'CD119A85F917A5A0D6FDE1DA11A01BBA34684F54FB43FE2428830CC4ED0CD56472403F045DB915AB2EDCEE850FD8933DED249E52012DD70B9DC74481D20013C3FEC70CA5A6A999315E11C86AEC3DA2590CBF201E2221EB3F017A972C7C48D391',onloadCallbacks:window.keenWebAutoCollector.onloadCallbacks}),window.keenWebAutoCollector.loaded()}function initKeenWebAutoCollector(){window.keenWebAutoCollector.domReady()?window.createKeenWebAutoCollector():document.addEventListener("readystatechange",function(){window.keenWebAutoCollector.domReady()&&window.createKeenWebAutoCollector()})}window.keenWebAutoCollector={onloadCallbacks:[],onload:function(a){this.onloadCallbacks.push(a)},domReady:function(){return["ready","complete"].indexOf(document.readyState)>-1}};
+  </script>
+  <script async type="text/javascript" src="https://d26b395fwzu5fz.cloudfront.net/keen-web-autocollector-1.0.7.min.js" onload="initKeenWebAutoCollector()"></script>
     <title>Artem Rosnovskiy — Front End Dev</title>
   </head>
   <body>
