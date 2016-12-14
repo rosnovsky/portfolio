@@ -36,11 +36,11 @@ a {
   text-decoration: inherit;
   border-bottom: 1px dotted white; }
 
-  a :hover {
-    color: #1bccc1;
-    border-bottom: 1px dashed #1bccc1;
-    text-transform: capitalize;
-    font-weight: bold; }
+li > a:hover {
+  color: #1bccc1;
+  border-bottom: 1px dashed #1bccc1;
+  text-transform: capitalize;
+  }
 
 .email:hover {
   text-transform: none; }
@@ -63,7 +63,7 @@ nav ul li {
 .books {
   justify-content: center; }
 
-  .books a, .books a:hover {
+  .books a, .books a:hover, .book a, .book a:hover  {
     border-bottom: none;
     color: inherit;
     text-transform: none; }
@@ -74,9 +74,19 @@ nav ul li {
   flex-wrap: wrap;
   margin-bottom: 2em;
   text-align: center; }
+  
   .book p {
     margin-bottom: 1em;
     margin-top: 1em; }
+
+    .bookTitle:hover
+    {
+      border-bottom: none;
+      color: inherit;
+      text-transform: none;
+      font-weight: bold;
+    }
+
   .book img:hover {
     transition: box-shadow 0.6s ease-in-out;
     box-shadow: 0 5px 15px white; 

@@ -54,20 +54,20 @@ class App extends Component {
   <div className="row books">
     <div className="three columns book">
       <a href="http://amzn.to/2epRd6H" target="_blank"><img src="images/22814239.jpg" alt="You don&#39;t know JS"/>
-      <p>You Don&#39;t Know JS: this &amp; Object Prototypes</p></a>
+      <p className="bookTitle">You Don&#39;t Know JS: this &amp; Object Prototypes</p></a>
     </div>
     
     <div className="three columns book">
       <a href="http://amzn.to/2eSLIxI" target="_blank"><img src="images/20830437.jpg" alt="CSS Secrets"/>
-      <p>CSS Secrets: Better Solutions to Everyday Web Design Problems</p></a>
+      <p className="bookTitle">CSS Secrets: Better Solutions to Everyday Web Design Problems</p></a>
     </div>
     <div className="three columns book">
       <a href="http://amzn.to/2eSLN4u" target="_blank"><img src="images/17204679.jpg" alt="Man&#39;s Search for Meaning"/>
-      <p>Man&#39;s Search for Meaning</p></a>
+      <p className="bookTitle">Man&#39;s Search for Meaning</p></a>
     </div>
     <div className="three columns book">
       <a href="http://amzn.to/2flyqOx" target="_blank"><img src="images/27426984.jpg" alt="Disrupted"/>
-      <p>Disrupted: My Misadventure in the Start-Up Bubble</p></a>
+      <p className="bookTitle">Disrupted: My Misadventure in the Start-Up Bubble</p></a>
     </div>
   </div>
 
