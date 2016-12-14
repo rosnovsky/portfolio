@@ -24,6 +24,13 @@ body {
   /*border: 1px solid white;*/
   padding: 5px; }
 
+.unavailable {
+  color: #FF0000;
+  font-weight: bold;
+  /*border: 1px solid white;*/
+  padding: 5px;   
+}
+
 a {
   color: inherit;
   text-decoration: inherit;
@@ -76,3 +83,4 @@ nav ul li {
   text-align: center; }
 
 /*# sourceMappingURL=styles.css.map */
+  

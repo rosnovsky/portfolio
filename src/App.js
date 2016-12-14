@@ -1,10 +1,18 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import './skeleton.css';
 import './App.css';
 
+
+function Year(props) {
+  return <p>© {props.year}</p>;
+}
+const year = new Date().getFullYear();
+const element = <Year year={year} />;
+
 class App extends Component {
-  render() {
+  render(props) {
     return (
+
 <div>
   <div className="row">
     <nav>
@@ -64,7 +72,7 @@ class App extends Component {
   </div>
 
   <div className="row footer">
-    <p>© 2017</p>
+    {element}
   </div> 
 </div>
       );
