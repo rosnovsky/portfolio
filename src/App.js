@@ -13,7 +13,7 @@ class App extends Component {
   render(props) {
     return (
 
-<div>
+<div className="container">
   <div className="row">
     <nav>
       <ul>
