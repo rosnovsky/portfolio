@@ -25,9 +25,9 @@ body {
   padding: 5px; }
 
 .unavailable {
-  color: #B60B08;
-  font-weight: bold;
-  /*border: 1px solid white;*/
+  color: #FF7F00;
+  font-weight: 900;
+  border-bottom: 1px solid white;
   padding: 5px;   
 }
 
