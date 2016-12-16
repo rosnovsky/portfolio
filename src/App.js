@@ -4,7 +4,7 @@ import './App.css';
 
 
 function Year(props) {
-  return <p>Copyright © {props.year} Artem Rosnovskiy. Online since 1996.</p>;
+  return <p>Copyright © <span className="currentYear">{props.year}</span> Artem Rosnovskiy.<br/> Online since 1996.</p>;
 }
 const year = new Date().getFullYear();
 const element = <Year year={year} />;
