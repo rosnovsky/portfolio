@@ -53,16 +53,16 @@ class App extends Component {
 
   <div className="row books">
     <div className="three columns book">
-      <a href="http://amzn.to/2epRd6H" target="_blank"><img src="images/22814239.jpg" alt="You don&#39;t know JS"/>
-      <p className="bookTitle">You Don&#39;t Know JS: this &amp; Object Prototypes</p></a>
+      <a href="http://amzn.to/2kNy9od" target="_blank"><img src="images/51zFTdNilAL.jpg" alt="Eloquent JavaScript: A Modern Introduction to Programming" className="bookCover" />
+      <p className="bookTitle">Eloquent JavaScript: A Modern Introduction to Programming</p></a>
     </div>
     
     <div className="three columns book">
-      <a href="http://amzn.to/2eSLIxI" target="_blank"><img src="images/20830437.jpg" alt="CSS Secrets"/>
-      <p className="bookTitle">CSS Secrets: Better Solutions to Everyday Web Design Problems</p></a>
+      <a href="http://amzn.to/2klA7O5" target="_blank"><img src="images/41EOlL+w6KL.jpg" alt="Blink" className="bookCover" />
+      <p className="bookTitle">Blink: The Power of Thinking Without Thinking</p></a>
     </div>
     <div className="three columns book">
-      <a href="http://amzn.to/2l2ArhX" target="_blank"><img src="images/51KWpTOBMcL.jpg" alt="Team of Rivals: The Political Genius of Abraham Lincoln" className="bookCover"/>
+      <a href="http://amzn.to/2l2ArhX" target="_blank"><img src="images/51KWpTOBMcL.jpg" alt="Team of Rivals: The Political Genius of Abraham Lincoln" className="bookCover" />
       <p className="bookTitle">Team of Rivals: The Political Genius of Abraham Lincoln</p></a>
     </div>
     <div className="three columns book">
