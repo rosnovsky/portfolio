@@ -54,7 +54,7 @@ class App extends Component {
   <div className="row books">
     <div className="three columns book">
       <a href="http://amzn.to/2kNy9od" target="_blank"><img src="images/51zFTdNilAL.jpg" alt="Eloquent JavaScript: A Modern Introduction to Programming" className="bookCover" />
-      <p className="bookTitle">Eloquent JavaScript: A Modern Introduction to Programming</p></a>
+      <p className="bookTitle wide">Eloquent JavaScript: A Modern Introduction to Programming</p></a>
     </div>
     
     <div className="three columns book">
