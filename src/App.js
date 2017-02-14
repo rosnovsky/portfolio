@@ -62,11 +62,11 @@ class App extends Component {
       <p className="bookTitle">CSS Secrets: Better Solutions to Everyday Web Design Problems</p></a>
     </div>
     <div className="three columns book">
-      <a href="http://amzn.to/2l2ArhX" target="_blank"><img src="images/51KWpTOBMcL.jpg" alt="Team of Rivals: The Political Genius of Abraham Lincoln"/>
+      <a href="http://amzn.to/2l2ArhX" target="_blank"><img src="images/51KWpTOBMcL.jpg" alt="Team of Rivals: The Political Genius of Abraham Lincoln" className="bookCover"/>
       <p className="bookTitle">Team of Rivals: The Political Genius of Abraham Lincoln</p></a>
     </div>
     <div className="three columns book">
-      <a href="http://amzn.to/2l2xcaq" target="_blank"><img src="images/41BQZYCzzqL.jpg" alt="Dreamland"/>
+      <a href="http://amzn.to/2l2xcaq" target="_blank"><img src="images/41BQZYCzzqL.jpg" alt="Dreamland" className="bookCover" />
       <p className="bookTitle">Dreamland: Adventures in the Strange Science of Sleep</p></a>
     </div>
   </div>
