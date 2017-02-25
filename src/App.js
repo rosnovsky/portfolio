@@ -33,7 +33,7 @@ class App extends Component {
   <div className="row content">
     <div className="six columns">
       <h4>Hi there!</h4>
-      <p>Thanks for dropping by. I design and develop easy-to-use and clear user interfaces for web sites and applications, both web and iOS/Android. I fully embrace mobile-first, device-specific designs, latest standards and best practices in producing and developing interfaces and websites. At this moment, I work in a position of a Web Producer and Assistant Manager at <img src="images/intel_logo.png" height="22px" alt="Intel Logo" /> as a contigent worker.</p>
+      <p>Thanks for stopping by. I design and develop and manage easy-to-use, clear user interfaces for web sites and applications, both web and iOS/Android. I fully embrace mobile-first, device-specific designs, latest standards and best practices in producing and developing interfaces and websites. At this moment, I work in a position of a Web Producer and Assistant Manager at <img src="images/intel_logo.png" height="22px" alt="Intel Logo" /> as a contractor.</p> Previously, I engaged with organizations like NASA, CBS, The New York Times, Zendesk, Helpscout, and more.
       <p><a href="artem-rosnovskiy-front-end.pdf">Download my updated resumé</a> and drop me a line at <a href="mailto:artem.rosnovsky@gmail.com" className="email">artem.rosnovsky@gmail.com</a>. I’m <span className="available">tentatively open</span> for new opportunities.</p>
     </div>
     
@@ -41,7 +41,7 @@ class App extends Component {
       <h4>Skills &amp; Expertise</h4>
       <p><strong>Web dev</strong>: HTML5, CSS3, Javascript, jQuery, Gulp, Webpack, npm, Sass, Bootstrap, git, Ubuntu, Apache, nginx, PHP, MySQL</p>
       <p><strong>Design and Media</strong>: Adobe Photoshop, Illustrator, AfterEffectr, Premier Pro, Dreamweaver, Flash (including ActionScript), Audition, Sketch by Bohemian, Adobe Experience Manager (AEM)</p>
-      <p><strong>In Progress</strong>: React, Node.js, Angular 2, MongoDB, Swift</p>
+      <p><strong>In Progress</strong>: ES6, React, Node.js, Angular 2, MongoDB, Swift, WebOps</p>
     </div>
   </div>
 
