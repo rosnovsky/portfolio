@@ -7,7 +7,7 @@ function Year(props) {
   return <p>Copyright © <span className="currentYear">{props.year}</span> Artem Rosnovskiy.<br/> Online since 1996.</p>;
 }
 const year = new Date().getFullYear();
-const element = <Year year={year} />;
+const copyright = <Year year={year} />;
 
 class App extends Component {
   render(props) {
@@ -72,7 +72,7 @@ class App extends Component {
   </div>
 
   <div className="row footer">
-    {element}
+    {copyright}
   </div> 
 </div>
       );
