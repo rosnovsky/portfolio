@@ -1,3 +1,14 @@
+@font-face {
+    font-family: "Anonymous Pro";
+    src: url('./AnonymousPro-Regular.ttf');
+}
+
+@font-face {
+    font-family: "Anonymous Pro";
+    src: url('./AnonymousPro-Bold.ttf');
+    font-weight: bold;
+}
+
 body {
   color: white;
   background-image: radial-gradient(50% 68%, #298DBD 20%, #125488 80%);
