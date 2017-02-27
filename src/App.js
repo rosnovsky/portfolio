@@ -2,12 +2,11 @@ import React, { Component } from 'react';
 import './skeleton.css';
 import './App.css';
 
+const year = new Date().getFullYear();
 
 function Year(props) {
-  return <p>Copyright © <span className="currentYear">{props.year}</span> Artem Rosnovskiy.<br/> Online since 1996.</p>;
+  return <div className="row footer"><p>Copyright © <span className="currentYear">{props.currentYear}</span> Artem Rosnovskiy.<br/> Online since 1996.</p></div>;
 }
-const year = new Date().getFullYear();
-const copyright = <Year year={year} />;
 
 class App extends Component {
   render(props) {
@@ -71,9 +70,9 @@ class App extends Component {
     </div>
   </div>
 
-  <div className="row footer">
-    {copyright}
-  </div> 
+  
+    <Year currentYear={year} />
+
 </div>
       );
   }
