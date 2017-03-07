@@ -1,3 +1,4 @@
+console.time('index.js load time');
 import React from 'react';
 import ReactDOM from 'react-dom';
 // import './normalize.css';
@@ -14,4 +15,4 @@ ReactDOM.render(
   <App />,
   document.getElementById('root')
 );
-
+console.timeEnd('index.js load time');
