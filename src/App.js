@@ -32,7 +32,7 @@ class App extends Component {
   <div className="row content">
     <div className="six columns">
       <h4>Hi there!</h4>
-      <p>Thanks for stopping by. I design and develop and manage easy-to-use, clear user interfaces for web sites and applications, both web and iOS/Android. I fully embrace mobile-first, device-specific designs, latest standards and best practices in producing and developing interfaces and websites. At this moment, I work in a position of a Web Producer and Assistant Manager at <img src="images/intel_logo.png" height="22px" alt="Intel Logo" /> as a contractor.</p> Previously, I engaged with organizations like NASA, CBS, The New York Times, Zendesk, Helpscout, and more.
+      <p>Thanks for stopping by. I design and develop and manage easy-to-use, clear user interfaces for web sites and applications, both web and iOS/Android. I fully embrace mobile-first, device-specific designs, latest standards and best practices in producing and developing interfaces and websites. At this moment, I work in a position of a Web Producer and Assistant Manager at Intel (contigent).</p> Previously, I engaged with organizations like NASA, CBS, The New York Times, and others, as well as various startups.
       <p><a href="artem-rosnovskiy-front-end.pdf">Download my updated resumé</a> and drop me a line at <a href="mailto:artem.rosnovsky@gmail.com" className="email">artem.rosnovsky@gmail.com</a>. I’m <span className="available">tentatively open</span> for new opportunities.</p>
     </div>
     
