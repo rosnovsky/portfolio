@@ -7,9 +7,6 @@ it('renders without crashing', () => {
   ReactDOM.render(<App />, div);
 });
 
-describe('Current Year', () => {
-  it('2016', () => {
-    
-    ReactDOM.render(<App />, expect(Year(props)).toBe("2016"));
-  });
+it('show proper year', () => {
+  ReactDOM.render(<App />).includes("2017");
 });
