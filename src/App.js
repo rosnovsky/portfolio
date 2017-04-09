@@ -33,7 +33,7 @@ class App extends Component {
     <div className="six columns">
       <h4>Hi there!</h4>
       <p>Thanks for stopping by. I design and develop and manage easy-to-use, clear user interfaces for web sites and applications, both web and iOS/Android. I fully embrace mobile-first, device-specific designs, latest standards and best practices in producing and developing interfaces and websites. At this moment, I work in a position of a Web Producer and Assistant Manager for Intel.</p>
-      <p><a href="artem-rosnovskiy-front-end.pdf">Download my updated resumé</a> and drop me a line at <a href="mailto:artem.rosnovsky@gmail.com" className="email">artem.rosnovsky@gmail.com</a>. Currently, I’m <span className="available">open</span> for new opportunities.</p>
+      <p><a href="artem-rosnovskiy-front-end.pdf">Download my updated resumé</a> and drop me a line at <a href="mailto:artem.rosnovsky@gmail.com" className="email">artem.rosnovsky@gmail.com</a>. Currently, I’m <span className="unavailable">unavailable</span> for new opportunities.</p>
     </div>
     
     <div className="six columns">
