@@ -5,13 +5,14 @@ import './App.css';
 const year = new Date().getFullYear();
 
 function Year(props) {
-  return <div className="row footer"><p>Copyright Â© <span className="currentYear">{props.currentYear}</span> Artem Rosnovskiy.<br/> Online since 1996.</p></div>;
+  return <div className="row footer"><p>Copyright © <span className="currentYear">{props.currentYear}</span> Artem Rosnovskiy.<br/> Online since 1996.</p></div>;
 }
 
 class App extends Component {
   render(props) {
     return (
 
+//menu component
 <div className="container">
   <div className="row">
     <nav>
@@ -24,18 +25,23 @@ class App extends Component {
     </nav>
   </div>
 
+//name and title component
   <div className="row title">
     <h1>Artem Rosnovskiy</h1>
     <h3>Front-End Developer</h3>
   </div>
 
+
+//intro text component
   <div className="row content">
     <div className="six columns">
       <h4>Hi there!</h4>
       <p>Thanks for stopping by. I design and develop and manage easy-to-use, clear user interfaces for web sites and applications, both web and iOS/Android. I fully embrace mobile-first, device-specific designs, latest standards and best practices in producing and developing interfaces and websites. At this moment, I work in a position of a Web Producer and Assistant Manager for Intel.</p>
-      <p><a href="artem-rosnovskiy-front-end.pdf">Download my updated resumÃ©</a> and drop me a line at <a href="mailto:artem.rosnovsky@gmail.com" className="email">artem.rosnovsky@gmail.com</a>. Currently, Iâ€™m <span className="unavailable">unavailable</span> for new opportunities.</p>
+      <p><a href="artem-rosnovskiy-front-end.pdf">Download my updated resumé</a> and drop me a line at <a href="mailto:artem.rosnovsky@gmail.com" className="email">artem.rosnovsky@gmail.com</a>. Currently, I’m <span className="unavailable">unavailable</span> for new opportunities.</p>
     </div>
-    
+
+
+//skills component
     <div className="six columns">
       <h4>Skills &amp; Expertise</h4>
       <p><strong>Web dev</strong>: HTML5, CSS3, Javascript, jQuery, Gulp, Webpack, npm, Sass, Bootstrap, git, Ubuntu, Apache, nginx, PHP, MySQL, SSL</p>
@@ -44,7 +50,9 @@ class App extends Component {
     </div>
   </div>
 
-  <div className="row">
+
+//current reading component
+<div className="row">
     <div className="twelve columns">
       <h4>Current Reading</h4>
     </div>
@@ -70,7 +78,7 @@ class App extends Component {
     </div>
   </div>
 
-  
+//footer component  
     <Year currentYear={year} />
 
 </div>
