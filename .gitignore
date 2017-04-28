@@ -13,3 +13,6 @@ build
 .DS_Store
 .env
 npm-debug.log
+CS
+id_rsa1
+id_rsa1.pub
