@@ -12,7 +12,7 @@ class App extends Component {
   render(props) {
     return (
 
-/* menu component */
+{/* menu component */}
 <div className="container">
   <div className="row">
     <nav>
@@ -25,14 +25,14 @@ class App extends Component {
     </nav>
   </div>
 
-/* name and title component */
+{/* name and title component */}
   <div className="row title">
     <h1>Artem Rosnovskiy</h1>
     <h3>Front-End Developer</h3>
   </div>
 
 
-/* intro text component */
+{/* intro text component */}
   <div className="row content">
     <div className="six columns">
       <h4>Hi there!</h4>
@@ -41,7 +41,7 @@ class App extends Component {
     </div>
 
 
-/* skills component */
+{/* skills component */}
     <div className="six columns">
       <h4>Skills &amp; Expertise</h4>
       <p><strong>Web dev</strong>: HTML5, CSS3, Javascript, jQuery, Gulp, Webpack, npm, Sass, Bootstrap, git, Ubuntu, Apache, nginx, PHP, MySQL, SSL</p>
@@ -51,7 +51,7 @@ class App extends Component {
   </div>
 
 
-/* current reading component */
+{/* current reading component */}
 <div className="row">
     <div className="twelve columns">
       <h4>Current Reading</h4>
@@ -78,7 +78,7 @@ class App extends Component {
     </div>
   </div>
 
-/* footer component */
+{/* footer component */}
     <Year currentYear={year} />
 
 </div>
