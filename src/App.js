@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './skeleton.css';
 import './App.css';
+import Nav from './components/nav';
 
 const year = new Date().getFullYear();
 
@@ -14,16 +15,8 @@ class App extends Component {
 
 
 <div className="container">
-  <div className="row">
-    <nav>
-      <ul>
-        <li><a href="https://github.com/rosnovsky" target="_blank">github</a></li>
-        <li><a href="https://linkedin.com/in/rosnovsky" target="_blank">linkedin</a></li>
-        <li><a href="https://facebook.com/rosnovsky" target="_blank">facebook</a></li>
-        <li><a href="https://twitter.com/rosnovsky" target="_blank">twitter</a></li>
-      </ul>
-    </nav>
-  </div>
+
+<Nav />
 
 {/* name and title component */}
   <div className="row title">
