@@ -1,17 +1,14 @@
 import React, { Component } from 'react';
 import './skeleton.css';
 import './App.css';
-import Nav from './components/nav';
-import Welcome from './components/welcome';
-import Name from './components/name';
-import Skills from './components/skills';
-import CurrentReading from './components/currentreading';
+import Navigation from './components/Navigation';
+import Welcome from './components/Welcome';
+import Name from './components/Name';
+import Skills from './components/Skills';
+import CurrentReading from './components/CurrentReading';
+import Footer from './components/Footer';
 
 const year = new Date().getFullYear();
-
-function Year(props) {
-  return <div className="row footer"><p>Copyright © <span className="currentYear">{props.currentYear}</span> Artem Rosnovskiy.<br/> Online since 1996.</p></div>;
-}
 
 class App extends Component {
   render(props) {
@@ -19,12 +16,14 @@ class App extends Component {
 
 <div className="container">
 
-  <Nav />
-  <Name />
+  <Navigation>
+  </Navigation>
+
+  <Name name="Artem Rosnovskiy" position="Front-End Developer" />
 
   <div className="row content">
     
-    <Welcome />
+    <Welcome avialable={false} />
     <Skills />
 
   </div>
@@ -32,7 +31,7 @@ class App extends Component {
   <CurrentReading />
 
 
-    <Year currentYear={year} />
+    <Footer currentYear={year} />
 
 </div>
       );
