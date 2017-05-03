@@ -23,7 +23,7 @@ class App extends Component {
 
   <div className="row content">
     
-    <Welcome avialable={false} />
+    <Welcome />
     <Skills />
 
   </div>
