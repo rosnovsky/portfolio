@@ -37,3 +37,9 @@ h1 {
 .book {
 	max-width: 100px;
 }
+
+.info {
+	margin: 0 auto;
+	max-width: 400px;
+	padding: 10px;
+}

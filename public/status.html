@@ -8,7 +8,7 @@
 		<title>rosnovsky.status</title>
 
 		<link rel="stylesheet" href="styles/styles.css">
-		<!-- <link src="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" rel="stylesheet" type="text/css"> -->
+		<link src="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" rel="stylesheet" type="text/css">
 	</head>
 	<body>
 		<div class="container">
@@ -16,12 +16,24 @@
 				<div class="checkins">Last Check-in</div>
 				<div class="book">Current Book</div>
 				<div class="fitbit"><h3>Current Activity</h3><p class="heartrate">Checking heart rate</p><p class="steps">Checking Steps</p></div>
-				<div class="wakatime"><h3>Time coding today</h3><p>Not available due to cross-origin issues. Stay tuned!</p></div>
+				<div class="wakatime"><h3>Time coding today</h3><p><strong>12 hrs 54 mins</strong> of coding, <strong>2 hrs 9 mins</strong> a day.<br /><br />#1 language: <strong>JavaScript</strong><br /><br />Runner up: <strong>Pug</strong></p></div>
 			</div>
 		</div>
+		<div class="info">
+			<h3>What is going on here?</h3>
+			<p>This page queries 4 different APIs: Foursquare, Google Books, Fitbit and Wakatime. All requests are asynchronous which makes the page load faster and smoother. Fitbit API uses a OAuth 2.0, and Wakatime doesn't support cross-origin requests (still haven't resolved this one).</p>
+			<p>My next steps here are:
+			<ul>
+				<li>Resolving cross-origin issue with Wakatime API by encapsulating this page in a Node application</li>
+				<li>Adding a map via Google Static Map API to Current location</li>
+				<li>Making Current Book to pull a random book from my Currently Reading shelf</li>
+				<li>Visualize heart rate: introduce a heart icon which will blink according to HR</li>
+				<li>Add "Goal Achieved" check mark to Steps and show it whenever I achieve my stepping goal</li>
+				<li>Introduce better designs, icons and typography to the page</li>
+				<li>Introduce an API, which would allow anyone to query this page and get data in return.</li>
+			</p>
+			</div>
 
-
-
-		<script src="scripts/scripts.js" async ></script>
+		<script src="scripts/scripts.min.js" async ></script>
 	</body>
 </html>
