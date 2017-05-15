@@ -11,6 +11,7 @@ build
 
 # misc
 .DS_Store
-.env
+*.env
 npm-debug.log
 .c9
+ngrok
