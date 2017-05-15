@@ -1,0 +1,36 @@
+extends layout
+
+block content
+	.container
+		.status-block
+			.checkins Last Check-in
+			.book Current Book
+			h3.fitbit Current Activity
+			p.heartrate Checking heart rate
+			p.steps Checking Steps
+			.wakatime
+				h3 Time coding today
+				p
+					strong 12 hrs 54 mins
+					| of coding, 
+					strong 2 hrs 9 mins
+					| a day.
+					|
+					|#1 language: 
+					strong JavaScript
+					|
+					| Runner up: 
+					strong Pug
+		
+	.info
+	h3 What is going on here?
+	p This page queries 4 different APIs: Foursquare, Google Books, Fitbit and Wakatime. All requests are asynchronous which makes the page load faster and smoother. Fitbit API uses a OAuth 2.0, and Wakatime doesn't support cross-origin requests (still haven't resolved this one).
+	p My next steps here are:
+		ul
+			li Resolving cross-origin issue with Wakatime API by encapsulating this page in a Node application
+			li Adding a map via Google Static Map API to Current location
+			li Making Current Book to pull a random book from my Currently Reading shelf
+			li Visualize heart rate: introduce a heart icon which will blink according to HR
+			li Add "Goal Achieved" check mark to Steps and show it whenever I achieve my stepping goal
+			li Introduce better designs, icons and typography to the page
+			li Introduce an API, which would allow anyone to query this page and get data in return.
