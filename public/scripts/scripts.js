@@ -59,11 +59,15 @@ const getBook = async (bookID) => {
 
 const getCodingTime = async () => {
 	//Wakatime API stats request
+	const opts = {
+		  	method: 'GET',
+			headers: {"Access-Control-Allow-Origin" : "rosnovsky.us"}
+		};
 
 	const url = 'https://wakatime.com/api/v1/users/rosnovsky/stats/last_7_days?api_key=d7ecb2e7-fc89-4faf-a778-874a5742e251';
 	
 	//fetching the data
-	const result = await fetch(url);
+	const result = await fetch(url, opts);
 
 	//parsing weekly total
 	const codingData =  await result.json();
