@@ -5,12 +5,13 @@ body {
 }
 
 h1 {
-	margin-bottom: 3em;
+	margin-bottom: 1em;
 }
 
 .container {
 	display: flex;
-	
+	height: 100%;
+	width: 100vw;
 	justify-content: center;
 	align-items: center;
 	flex-direction: row;
@@ -27,8 +28,9 @@ h1 {
 
 .status-block div {
 	width: 150px;
-	height: 300px;
+	height: 100%;
 	align-items: center;
+	margin-bottom: 2em;
 	
 }
 

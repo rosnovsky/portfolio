@@ -61,13 +61,14 @@ const getCodingTime = async () => {
 	//Wakatime API stats request
 	const opts = {
 		  	method: 'GET',
-			headers: {"Access-Control-Allow-Origin" : "http://rosnovsky.us"}
+			header: { 	'Origin' : 'http://rosnovsky.us',
+						'Access-Control-Allow-Origin' : 'http://rosnovsky.us' }
 		};
 
-	const url = 'https://wakatime.com/api/v1/users/rosnovsky/stats/last_7_days?api_key=d7ecb2e7-fc89-4faf-a778-874a5742e251';
+	const url = 'https://crossorigin.me/https://wakatime.com/api/v1/users/rosnovsky/stats/last_7_days?api_key=d7ecb2e7-fc89-4faf-a778-874a5742e251';
 	
 	//fetching the data
-	const result = await fetch(url, opts);
+	const result = await fetch(url);
 
 	//parsing weekly total
 	const codingData =  await result.json();
