@@ -14,5 +14,3 @@ build
 .env
 npm-debug.log
 .c9
-script.source
-apiKeys.source
