@@ -81,7 +81,11 @@ exports.getStatus = async (req, res) => {
 			const url = 'https://api.fitbit.com/1/user/-/activities/heart/date/today/1d.json';
 			const HRdata = await fetch(url, opts);
 			const heartrateData =  await HRdata.json();
-			const fitbitHR = heartrateData['activities-heart'][0].value.restingHeartRate;
+			let fitbitHR = heartrateData['activities-heart'][0].value.restingHeartRate;
+
+			if (!fitbitHR || fitbitHR == 0 || fitbitHR == "undefined") {
+				fitbitHR = "Server Update in progress";
+			}
 
 			return fitbitHR;
 		}
