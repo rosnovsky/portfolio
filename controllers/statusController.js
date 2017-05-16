@@ -78,8 +78,6 @@ exports.getStatus = async (req, res) => {
 
 		const getFitbitHR = async () => {
 
-			
-
 			const url = 'https://api.fitbit.com/1/user/-/activities/heart/date/today/1d.json';
 			const HRdata = await fetch(url, opts);
 			const heartrateData =  await HRdata.json();
@@ -88,30 +86,10 @@ exports.getStatus = async (req, res) => {
 			return fitbitHR;
 		}
 
-		// -----------------
-		// FITBIT STEPS
-		// -----------------
-
 		const getFitbitSteps = async () => {
 
-			// Setting up today's date
-			let today = new Date();
-			let dd = today.getDate();
-			let mm = today.getMonth()+1; //January is 0!
-			const yyyy = today.getFullYear();
-
-			if(dd<10) {
-			    dd='0'+dd
-			} 
-
-			if(mm<10) {
-			    mm='0'+mm
-			} 
-
-			today = yyyy+'-'+mm+'-'+dd;
-
 			// Requesting today's steps
-			const url = `https://api.fitbit.com/1/user/-/activities/date/${today}.json`;
+			const url = `https://api.fitbit.com/1/user/-/activities/date/today.json`;
 			const stepsRawData = await fetch(url, opts);
 			const stepsData =  await stepsRawData.json();
 			const fitbitSteps = stepsData.summary.steps;
@@ -122,8 +100,8 @@ exports.getStatus = async (req, res) => {
 		const locations = await getCheckins();
 		const book = await getBook('mDzDBQAAQBAJ');
 		const codingTime = await getCodingTime();
-		const fitbitHR = await getFitbitHR();
-		const fitbitSteps = await getFitbitSteps();
+		const fitbitHR = await getFitbitHR(opts);
+		const fitbitSteps = await getFitbitSteps(opts);
 
 	
 	res.render('status', {locations, book, codingTime, fitbitHR, fitbitSteps});
