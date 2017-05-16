@@ -71,12 +71,12 @@ exports.getStatus = async (req, res) => {
 			return codingTime;	
 			}
 
+		const getFitbitHR = async () => {
+
 			const opts = {
 			  	method: 'GET',
 				headers: {"Authorization" : process.env.FITBIT }
 			};
-
-		const getFitbitHR = async (opts) => {
 
 			const url = 'https://api.fitbit.com/1/user/-/activities/heart/date/today/1d.json';
 			const HRdata = await fetch(url, opts);
@@ -86,7 +86,12 @@ exports.getStatus = async (req, res) => {
 			return fitbitHR;
 		}
 
-		const getFitbitSteps = async (opts) => {
+		const getFitbitSteps = async () => {
+			
+			const opts = {
+			  	method: 'GET',
+				headers: {"Authorization" : process.env.FITBIT }
+			};
 
 			// Requesting today's steps
 			const url = `https://api.fitbit.com/1/user/-/activities/date/today.json`;
@@ -100,8 +105,8 @@ exports.getStatus = async (req, res) => {
 		const locations = await getCheckins();
 		const book = await getBook('mDzDBQAAQBAJ');
 		const codingTime = await getCodingTime();
-		const fitbitHR = await getFitbitHR(opts);
-		const fitbitSteps = await getFitbitSteps(opts);
+		const fitbitHR = await getFitbitHR();
+		const fitbitSteps = await getFitbitSteps();
 
 	
 	res.render('status', {locations, book, codingTime, fitbitHR, fitbitSteps});
