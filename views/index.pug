@@ -1,0 +1,73 @@
+extends homepage
+
+block content
+	.container
+		.row
+			nav
+				ul
+					li
+						a(href='https://github.com/rosnovsky') github
+					li
+						a(href='https://linkedin.com/in/rosnovsky') linkedin
+					li
+						a(href='https://facebook.com/rosnovsky') facebook
+					li
+						a(href='https://twitter.com/rosnovsky') twitter
+					li
+						a(href='/status') status
+		
+		.row.title
+			h1 Artem Rosnovskiy
+			h3 Web Developer
+		
+		.row.content
+			.six.columns
+				h4 Hi there!
+				p
+					| Thanks for stopping by. I design and develop and manage easy-to-use, clear user interfaces for web sites and applications, both web and iOS/Android. I fully embrace mobile-first, device-specific designs, latest standards and best practices in producing and developing interfaces and websites. At this moment, I work as an Implementation Specialist for 
+					a(href='https://att.com') AT&amp;T
+					| .
+				p
+					a(href='/artem-rosnovskiy-web-developer.pdf') Download my updated resumé
+					|  and drop me a line at 
+					a.email(href='mailto:artem.rosnovsky@gmail.com') artem.rosnovsky@gmail.com
+					| . Currently, I'm 
+					span.unavailable  not immediately available
+					|  for new opportunities. Don't hesitate to get in touch!
+			.six.columns
+				h4 Skills &amp; Expertise
+				p
+					strong Web dev
+					| : HTML5, CSS3, Javascript, jQuery, Gulp, Webpack, npm, Sass, Bootstrap, git, Ubuntu, Apache, nginx, PHP, MySQL, SSL
+				p
+					strong Design and Media
+					| : Adobe Photoshop, Illustrator, AfterEffects, Premier Pro, Dreamweaver, Flash (including ActionScript), Audition, Sketch by Bohemian, Adobe Experience Manager (AEM)
+				p
+					strong In Progress
+					| : ES6, React, Redux, Node.js, MongoDB, Docker, WebOps
+		div
+			.row
+				.twelve.columns
+					h4 Current Reading
+			.row.books
+				.three.columns.book
+					a(href='http://amzn.to/2kNy9od', target='_blank')
+						img.bookCoverWide(src='images/51zFTdNilAL.jpg', alt='Eloquent JavaScript: A Modern Introduction to Programming')
+						p.bookTitle Eloquent JavaScript: A Modern Introduction to Programming
+				.three.columns.book
+					a(href='http://amzn.to/2klA7O5', target='_blank')
+						img.bookCover(src='images/41EOlL+w6KL.jpg', alt='Blink')
+						p.bookTitle Blink: The Power of Thinking Without Thinking
+				.three.columns.book
+					a(href='http://amzn.to/2l2ArhX', target='_blank')
+						img.bookCover(src='images/51KWpTOBMcL.jpg', alt='Team of Rivals: The Political Genius of Abraham Lincoln')
+						p.bookTitle Team of Rivals: The Political Genius of Abraham Lincoln
+				.three.columns.book
+					a(href='http://amzn.to/2l2xcaq', target='_blank')
+						img.bookCover(src='images/41BQZYCzzqL.jpg', alt='Dreamland')
+						p.bookTitle Dreamland: Adventures in the Strange Science of Sleep
+		.footer
+			p Copyright © #{year} Artem Rosnovskiy
+				br 
+				| Online since 1996
+
