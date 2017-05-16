@@ -1,0 +1,53 @@
+extends layout
+
+block content
+	.container
+		.status-block
+			.checkins
+				h3 Latest Check-in
+				p #{locations.current.venue} 
+				| (#{locations.current.city}, #{locations.current.state})
+			.book 
+				h3 Current Book
+				p
+				//- a(href=`${book.url}`)	
+				img(width="100px" src=`${book.cover}` alt=`${book.title} by ${book.authors}` title=`${book.title} by ${book.authors}`)
+
+			.fitbit
+				h3 Current Activity
+				p Resting HR today: 
+					strong #{fitbitHR}
+				p Steps today: 
+					strong #{fitbitSteps}
+			
+			.wakatime
+				h3 Side projects last 7 days
+				p
+					strong= codingTime.weekly
+					|  of coding, 
+					strong= codingTime.dailyAverage
+					|  a day.
+					br
+					br
+					| #1 language: 
+					strong= codingTime.language
+					br
+					br
+					|  Runner up: 
+					strong= codingTime.languageRunnerUp
+		
+	.info
+		h3 What is going on here?
+		p This app runs on Node and Express. It queries 4 different APIs: Foursquare, Google Books, Fitbit and Wakatime. All requests are asynchronous which makes the page load faster and smoother. Fitbit API uses OAuth 2 and Wakatime doesn't support cross-origin requests. But who cares, right?
+		p My next steps here are:
+			ul
+				li 
+					strike Resolving cross-origin issue with Wakatime API by encapsulating this page in a Node application
+				li Adding a map via Google Static Map API to Current location
+				li Making Current Book to pull a random book from my Currently Reading shelf
+				li Visualize heart rate: introduce a heart icon which will blink according to HR
+				li Add "Goal Achieved" check mark to Steps and show it whenever I achieve my stepping goal
+				li Introduce 
+					strike better 
+					| design, icons and typography to the page
+				li Introduce an API, which would allow anyone to query this page and get data in return.

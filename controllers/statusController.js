@@ -1,10 +1,5 @@
 const fetch = require('node-fetch');
 
-
-exports.homePage = (req, res) => {
-	res.render('index');
-};
-
 exports.getStatus = async (req, res) => {
 
 		const getCheckins =  async () => {
@@ -131,5 +126,5 @@ exports.getStatus = async (req, res) => {
 		const fitbitSteps = await getFitbitSteps();
 
 	
-	res.render('index', {locations, book, codingTime, fitbitHR, fitbitSteps});
+	res.render('status', {locations, book, codingTime, fitbitHR, fitbitSteps});
 };
