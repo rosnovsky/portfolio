@@ -6,6 +6,7 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const promisify = require('es6-promisify');
 const helpers = require('./helpers');
+var mime = require('mime');
 
 const index = require('./routes/index');
 
@@ -29,7 +30,7 @@ app.use('/', index);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-  var err = new Error('Not Found');
+  var err = new Error('Not Found' + req.body);
   err.status = 404;
   next(err);
 });

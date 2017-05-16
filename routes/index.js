@@ -7,7 +7,9 @@ const portfolioController = require('../controllers/portfolioController');
 
 // Do work here
 router.get('/', portfolioController.getPortfolio);
+router.get('/resume', portfolioController.getResume);
 router.get('/status', statusController.getStatus);
+
 
 
 module.exports = router;
