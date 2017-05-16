@@ -76,7 +76,7 @@ exports.getStatus = async (req, res) => {
 				headers: {"Authorization" : process.env.FITBIT }
 			};
 
-		const getFitbitHR = async () => {
+		const getFitbitHR = async (opts) => {
 
 			const url = 'https://api.fitbit.com/1/user/-/activities/heart/date/today/1d.json';
 			const HRdata = await fetch(url, opts);
@@ -86,7 +86,7 @@ exports.getStatus = async (req, res) => {
 			return fitbitHR;
 		}
 
-		const getFitbitSteps = async () => {
+		const getFitbitSteps = async (opts) => {
 
 			// Requesting today's steps
 			const url = `https://api.fitbit.com/1/user/-/activities/date/today.json`;
