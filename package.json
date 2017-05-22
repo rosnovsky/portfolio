@@ -1,14 +1,14 @@
 {
   "name": "rosnovsky-us",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "engines": {
     "node": ">= 7.6.0"
   },
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "test": "jasmine"
   },
-
   "dependencies": {
     "body-parser": "~1.17.1",
     "cookie-parser": "~1.4.3",
@@ -21,5 +21,8 @@
     "node-fetch": "^1.6.3",
     "pug": "~2.0.0-beta11",
     "serve-favicon": "~2.4.2"
+  },
+  "devDependencies": {
+    "jasmine": "^2.6.0"
   }
 }

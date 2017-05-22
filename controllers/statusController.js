@@ -15,9 +15,11 @@ exports.getStatus = async (req, res) => {
 			//current and previous locations
 			const locations = { 
 				"current": {
-							"city": locationData.response.checkins.items[0].venue.location.city, 
+							"city" : locationData.response.checkins.items[0].venue.location.city, 
 							"state": locationData.response.checkins.items[0].venue.location.state, 
-							"venue": locationData.response.checkins.items[0].venue.name
+							"venue": locationData.response.checkins.items[0].venue.name,
+							"lat" : locationData.response.checkins.items[0].venue.location.lat,
+							"lng"  : locationData.response.checkins.items[0].venue.location.lng,
 						},
 				
 				"previous": { 
@@ -31,20 +33,31 @@ exports.getStatus = async (req, res) => {
 
 		const getBook = async (bookID) => {
 			//Google Books API volume request
-			const url = 'https://www.googleapis.com/books/v1/volumes/'+ bookID;
+			const url = 'https://www.googleapis.com/books/v1/users/109765411434313905037/bookshelves/3/volumes';
 			
 			//fetching the data
 			const result = await fetch(url);
 
 			//parsing the book object
-			const bookData =  await result.json();
-			const authorsList = [...bookData.volumeInfo.authors].slice(',').join(" and ");
+			const shelfData =  await result.json();
+			const bookData = shelfData.items[0];
+			
+
+			let authorsList = [...bookData.volumeInfo.authors];
+			
+			if(authorsList.length >= 3){
+				authorsList = [...bookData.volumeInfo.authors].slice(',').join(", ");
+			}
+			else {
+				authorsList = [...bookData.volumeInfo.authors].slice(',').join(" and ");	
+			}
+			
 
 			//Combining book object
 			const book = {
 				"title": bookData.volumeInfo.title,
 				"authors": authorsList,
-				"cover": bookData.volumeInfo.imageLinks.small,
+				"cover": bookData.volumeInfo.imageLinks.thumbnail,
 				"url": bookData.volumeInfo.previewLink
 			}
 			
@@ -107,11 +120,12 @@ exports.getStatus = async (req, res) => {
 		}
 
 		const locations = await getCheckins();
-		const book = await getBook('mDzDBQAAQBAJ');
+		const book = await getBook();
 		const codingTime = await getCodingTime();
 		const fitbitHR = await getFitbitHR();
 		const fitbitSteps = await getFitbitSteps();
 
+		const mapUrl = "https://maps.googleapis.com/maps/api/staticmap?center=" + locations.current.lat + "," + locations.current.lng + "&zoom=8&size=200x200&markers=color:red%7Clabel:R%7C" + locations.current.lat+ "," + locations.current.lng + "&style=element:geometry.stroke|visibility:off&style=feature:landscape|element:geometry|saturation:-100&style=feature:water|saturation:-100|invert_lightness:true&key=" + process.env.GOOGLE_MAPS;
 	
-	res.render('status', {locations, book, codingTime, fitbitHR, fitbitSteps});
+	res.render('status', {locations, book, codingTime, fitbitHR, fitbitSteps, mapUrl});
 };

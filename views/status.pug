@@ -7,11 +7,13 @@ block content
 				h3 Latest Check-in
 				p #{locations.current.venue} 
 				| (#{locations.current.city}, #{locations.current.state})
+				|
+				p 
+					img(src=`${mapUrl}`)
+
 			.book 
 				h3 Current Book
-				p
-				//- a(href=`${book.url}`)	
-				img(width="100px" src=`${book.cover}` alt=`${book.title} by ${book.authors}` title=`${book.title} by ${book.authors}`)
+				a(href=`${book.url}`): img(src=`${book.cover}` width="150px" alt=`${book.title} by ${book.authors}` title=`${book.title} by ${book.authors}`)
 
 			.fitbit
 				h3 Current Activity
@@ -43,11 +45,10 @@ block content
 			ul
 				li 
 					strike Resolving cross-origin issue with Wakatime API by encapsulating this page in a Node application
+				li 
+					strike Making Current Book to pull a book from my Currently Reading shelf
 				li Adding a map via Google Static Map API to Current location
-				li Making Current Book to pull a random book from my Currently Reading shelf
 				li Visualize heart rate: introduce a heart icon which will blink according to HR
 				li Add "Goal Achieved" check mark to Steps and show it whenever I achieve my stepping goal
-				li Introduce 
-					strike better 
-					| design, icons and typography to the page
+				li Introduce design, icons and typography to the page
 				li Introduce an API, which would allow anyone to query this page and get data in return.
