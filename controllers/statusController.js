@@ -19,7 +19,8 @@ exports.getStatus = async (req, res) => {
 							"state": locationData.response.checkins.items[0].venue.location.state, 
 							"venue": locationData.response.checkins.items[0].venue.name,
 							"lat" : locationData.response.checkins.items[0].venue.location.lat,
-							"lng"  : locationData.response.checkins.items[0].venue.location.lng,
+							"lng" : locationData.response.checkins.items[0].venue.location.lng,
+							"address" : locationData.response.checkins.items[0].venue.location.formattedAddress[0] + ", " + locationData.response.checkins.items[0].venue.location.formattedAddress[1]
 						},
 				
 				"previous": { 

@@ -4,8 +4,8 @@ body {
 	font-family: 'Source Sans Pro', sans-serif;
 }
 
-h1 {
-	margin-bottom: 1em;
+h3 {
+	padding-bottom: 2em;
 }
 
 .container {
@@ -23,7 +23,8 @@ h1 {
 	align-items: center;
 	justify-content: space-between;
 	width: 75vw;
-	flex-wrap: wrap
+	flex-wrap: wrap;
+	height: 500px;
 }
 
 .status-block div {

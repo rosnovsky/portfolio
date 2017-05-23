@@ -5,14 +5,16 @@ block content
 		.status-block
 			.checkins
 				h3 Latest Check-in
-				p #{locations.current.venue} 
-				| (#{locations.current.city}, #{locations.current.state})
-				|
+				p 
+					a(href=`https://www.google.com/maps/place/${locations.current.address}`) #{locations.current.venue}
+					| , #{locations.current.city}, #{locations.current.state}
 				p 
 					img(src=`${mapUrl}`)
 
 			.book 
 				h3 Current Book
+				a(href=`${book.url}`) 
+					| #{book.title} by #{book.authors}
 				a(href=`${book.url}`): img(src=`${book.cover}` width="150px" alt=`${book.title} by ${book.authors}` title=`${book.title} by ${book.authors}`)
 
 			.fitbit
