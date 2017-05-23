@@ -126,7 +126,7 @@ exports.getStatus = async (req, res) => {
 		const fitbitHR = await getFitbitHR();
 		const fitbitSteps = await getFitbitSteps();
 
-		const mapUrl = "https://maps.googleapis.com/maps/api/staticmap?maptype=terrain&center=" + locations.current.lat + "," + locations.current.lng + "&zoom=8&size=200x200&markers=color:red%7Clabel:R%7C" + locations.current.lat+ "," + locations.current.lng + "&key=" + process.env.GOOGLE_MAPS;
+		const mapUrl = "https://maps.googleapis.com/maps/api/staticmap?maptype=terrain&center=" + locations.current.lat + "," + locations.current.lng + "&zoom=8&size=200x400&scale=2&markers=color:red%7Clabel:R%7C" + locations.current.lat+ "," + locations.current.lng + "&key=" + process.env.GOOGLE_MAPS;
 	
 	res.render('status', {locations, book, codingTime, fitbitHR, fitbitSteps, mapUrl});
 };

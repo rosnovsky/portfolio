@@ -9,7 +9,7 @@ block content
 					a(href=`https://www.google.com/maps/place/${locations.current.address}`) #{locations.current.venue}
 					| , #{locations.current.city}, #{locations.current.state}
 				p 
-					img(src=`${mapUrl}`)
+					img(src=`${mapUrl}` width="200px")
 
 			.book 
 				h3 Current Book
@@ -34,7 +34,8 @@ block content
 					br
 					br
 					| #1 language: 
-					strong= codingTime.language
+					span.lang 
+						strong= codingTime.language
 					br
 					br
 					|  Runner up: 
