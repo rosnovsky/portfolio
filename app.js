@@ -6,7 +6,7 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const promisify = require('es6-promisify');
 const helpers = require('./helpers');
-var mime = require('mime');
+const mime = require('mime');
 
 const index = require('./routes/index');
 
