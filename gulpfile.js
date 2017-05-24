@@ -9,11 +9,10 @@ const watch = require('gulp-watch');
  * Gulp Tasks
  */
 
-gulp.task("stylus", function() {
-  gulp.watch('./src/stylesheet/*.styl');
-  gulp.src('./src/stylesheet/*.styl')
+gulp.task('stylus', function() {
+  gulp.src('src/styles/*.styl')
     .pipe(stylus())
-    .pipe(gulp.dest('./public/strylesheets/'))
+    .pipe(gulp.dest('./public/stylesheets/'))
     .pipe(reload({stream:true}));
 });
 
@@ -49,4 +48,8 @@ gulp.task('nodemon', function (cb) {
   });
 });
 
-gulp.task('default', ['browser-sync', 'stylus', 'nodemon'])
+gulp.task('watch', function() {
+  gulp.watch('./src/styles/*.styl', ['stylus']);
+});
+
+gulp.task('default', ['browser-sync', 'stylus', 'nodemon', 'watch'])
