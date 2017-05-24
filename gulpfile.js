@@ -49,4 +49,4 @@ gulp.task('nodemon', function (cb) {
   });
 });
 
-gulp.task('default', ['browser-sync', 'stylus'])
+gulp.task('default', ['browser-sync', 'stylus', 'nodemon'])
