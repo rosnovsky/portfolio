@@ -30,6 +30,7 @@ gulp.task('nodemon', function (cb) {
   var called = false;
   return nodemon({
     script: 'bin/www',
+    ext: 'js pug html',
     ignore: [
       'gulpfile.js',
       'node_modules/'
