@@ -6,7 +6,7 @@ block content
 			.checkins
 				h3 Latest Check-in
 				p 
-					a(href=`https://www.google.com/maps/place/${locations.current.address}`) #{locations.current.venue}
+					a(href=`https://www.google.com/maps/place/${locations.current.lat},${locations.current.lng}`) #{locations.current.venue}
 					| , #{locations.current.city}, #{locations.current.state}
 				p 
 					img(src=`${mapUrl}` width="200px")
