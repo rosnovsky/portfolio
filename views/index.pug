@@ -7,18 +7,26 @@ block content
 			h2 Web Developer
 		
 		.square
-			span I'm here
+			span.here I'm 
+				br 
+				| here
 			
 		.map
-			span Map
 		
 		.location
-			p Bailey Farm Appartments
+			p 
+				a(href='#') Bailey Farm Appartments
 			| Bothell, WA
 		
 		.insert
-			.h3 Tech
-			p This site runs as a Node.js application, featuring MongoDB and Express. This page makes asynchronus requests to Foursquare and Google Maps Static APIs featuring async/await and some ES6 beauty. It tracks my last Swarm checkin, adds a venue name with a link and points the location on a map.
+			h3 Tech
+			p.tech This site runs as a 
+				span.highlighter Node.js
+				|  application, featuring 
+				span.highlighter MongoDB and Express
+				| . This page makes asynchronus requests to Foursquare and Google Maps Static APIs featuring 
+				span.highlighter async/await 
+				| and some ES6 beauty. It tracks my last Swarm checkin, adds a venue name with a link and points the location on a map.
 
 		.next
 			h2 What else can you do? >
