@@ -1,5 +1,4 @@
 @import 'https://fonts.googleapis.com/css?family=PT+Mono:400,900'
-// @import 'https://fonts.googleapis.com/css?family=Josefin+Sans:700'
 
 body
 	font-family 'PT Mono', sans-serif
@@ -14,22 +13,25 @@ body
 	display flex
 	width: 620px
 	flex-direction column
-	
-.map
+
+.header
 	position absolute
-	background-image url('../images/map-insert.png')
+	top 0
 	left 0
 	width 100%
-	height 300px
-	margin-top -230px
-	z-index -10
+	height 400px
 	
+.map
+
 .title
 	color #000000
 	font-size 14px
 	font-weight 400
 	
 .square 
+	position relative
+	left 400px
+	top -150px
 	width 300px
 	height 300px
 	background-color rgba(250,220,76,.75)
@@ -38,8 +40,8 @@ body
 .location
 	font-size 2.5rem
 	line-height 2rem
-	margin-top 5rem
-	margin-bottom: 3rem
+	margin-top 1rem
+	margin-bottom: 2rem
 
 a
 	color black
