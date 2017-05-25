@@ -15,8 +15,8 @@ block content
 		
 		.location
 			p 
-				a(href='#') Bailey Farm Appartments
-			| Bothell, WA
+				a(href=`https://www.google.com/maps/@${locations.current.lat},${locations.current.lng},14z`) #{locations.current.venue}
+			| #{locations.current.city}, #{locations.current.state}
 		
 		.insert
 			h3 Tech

@@ -127,6 +127,13 @@ exports.getStatus = async (req, res) => {
 		const fitbitSteps = await getFitbitSteps();
 
 		const mapUrl = "https://maps.googleapis.com/maps/api/staticmap?maptype=terrain&center=" + locations.current.lat + "," + locations.current.lng + "&zoom=8&size=200x400&scale=2&markers=color:red%7Clabel:R%7C" + locations.current.lat+ "," + locations.current.lng + "&key=" + process.env.GOOGLE_MAPS;
+
+		const year = new Date().getFullYear();
 	
-	res.render('status', {locations, book, codingTime, fitbitHR, fitbitSteps, mapUrl});
+	res.render('index', {locations, book, codingTime, fitbitHR, fitbitSteps, mapUrl, title : "Artem Rosnovskiy — Web Developer", year });
 };
+
+// exports.getResume = (req, res) => {
+// 	res.download('./public/artem-rosnovskiy-web-developer.pdf');
+// };
+

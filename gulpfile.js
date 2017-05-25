@@ -19,17 +19,15 @@ gulp.task('stylus', function() {
 
 
 gulp.task('browser-sync', ['nodemon'], function() {
-  browserSync({
-    proxy: "localhost:1982",  // local node app address
-    port: 1666,  // use *different* port than above
-    notify: true
+  browserSync.init(null, {
+        proxy: "http://localhost:3000"
+    });
   });
-});
 
 gulp.task('nodemon', function (cb) {
   var called = false;
   return nodemon({
-    script: 'bin/www',
+    script: 'app.js',
     ext: 'js pug html',
     ignore: [
       'gulpfile.js',
