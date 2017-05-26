@@ -2,11 +2,12 @@ extends homepage
 
 block content
 	.container
+		.navbar
+			h1.title @rosnovsky / web dev
+
 		.header(style=`background-image:url('${mapUrl}');background-size:cover`)
 
-		.title
-			h1 Artem Rosnovskiy 
-			h2 Web Developer
+		
 		
 		.square
 			span.here I'm 
@@ -17,7 +18,7 @@ block content
 		
 		.location
 			p 
-				a(href=`https://www.google.com/maps/@${locations.current.lat},${locations.current.lng},14z`) #{locations.current.venue}
+				a(href=`https://www.google.com/maps/place/${locations.current.venue}/@${locations.current.lat},${locations.current.lng},15z`) #{locations.current.venue}
 			| #{locations.current.city}, #{locations.current.state}
 		
 		.insert
@@ -25,8 +26,8 @@ block content
 			p.tech This site runs as a 
 				span.highlighter Node.js
 				|  application, featuring 
-				span.highlighter MongoDB and Express
-				| . This page makes asynchronus requests to Foursquare and Google Maps Static APIs featuring 
+				span.highlighter Express, Pug and Stylus
+				| as well as gulp with nodemon and browser-sync for development convenience. The app makes asynchronus requests to Foursquare and Google Maps Static APIs using 
 				span.highlighter async/await 
 				| and some ES6 beauty. It tracks my last Swarm checkin, adds a venue name with a link and points the location on a map.
 
