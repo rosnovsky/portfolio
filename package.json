@@ -6,7 +6,9 @@
   },
   "private": true,
   "scripts": {
-    "dev": "gulp"
+    "test" : "mocha tests/*.js",
+    "dev" : "gulp",
+    "start" : "gulp stylus && node ./bin/www"
   },
   "dependencies": {
     "body-parser": "~1.17.1",
@@ -26,6 +28,8 @@
     "gulp": "^3.9.1",
     "gulp-nodemon": "^2.2.1",
     "gulp-stylus": "^2.6.0",
-    "gulp-watch": "^4.3.11"
+    "gulp-watch": "^4.3.11",
+    "mocha": "^3.4.2",
+    "supertest": "^3.0.0"
   }
 }
