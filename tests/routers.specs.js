@@ -23,6 +23,7 @@ describe('Routes', function() {
 		request(app)
 	      .get('/')
 	      .expect(200, done);
+	      done();
 	  });
 	});
 
