@@ -1,7 +1,7 @@
 {
   "language": "node_js",
   "node_js": "7.10",
-  "script": "npm test",
+  "script": "npm run build",
   "group": "stable",
   "dist": "precise",
   "os": "linux"

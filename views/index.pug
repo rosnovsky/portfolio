@@ -14,54 +14,21 @@ block content
 			
 		.map
 		
-		.row.content
-			.six.columns
-				h4 Hi there!
-				p
-					| Thanks for stopping by. I design and develop web applications. I fully embrace mobile-first, device-specific designs, latest standards and best practices in producing and developing web apps. At this moment, I work as an Implementation Specialist for 
-					a(href='https://att.com') AT&amp;T
-					| .
-				p
-					a(href='/artem-rosnovskiy-full-stack.pdf') Download my updated resumé
-					|  and drop me a line at 
-					a.email(href='mailto:artem@rosnovsky.us') artem@rosnovsky.us
-					| . I'm always 
-					span.available open
-					|  for new opportunities. Don't hesitate to get in touch!
-			.six.columns
-				h4 Skills &amp; Expertise
-				p
-					strong Web dev
-					| : HTML5, CSS3, Javascript (ES2015), React, Pug/Jade, Stylus, Node.js, Express, jQuery, gulp, Webpack, npm, Sass, Bootstrap, git, bash, Apache, nginx, PHP, MySQL, SSL
-				p
-					strong Design and Media
-					| : Adobe Photoshop, Illustrator, AfterEffects, Premier Pro, Dreamweaver, Flash (including ActionScript), Audition, Sketch by Bohemian, Adobe Experience Manager (AEM)
-				p
-					strong In Progress
-					| : Redux, MongoDB, Docker
-		div
-			.row
-				.twelve.columns
-					h4 Current Reading
-			.row.books
-				.three.columns.book
-					a(href=`${books[0].url}`, target='_blank')
-						img.bookCoverWide(src=`${books[0].cover}`, alt=`#{books[0].title}`)
-						p.bookTitle #{books[0].title} by #{books[0].authors}
-				.three.columns.book
-					a(href=`${books[1].url}`, target='_blank')
-						img.bookCoverWide(src=`${books[1].cover}`, alt=`#{books[1].title}`)
-						p.bookTitle #{books[1].title} by #{books[1].authors}
-				.three.columns.book
-					a(href=`${books[2].url}`, target='_blank')
-						img.bookCoverWide(src=`${books[2].cover}`, alt=`#{books[2].title}`)
-						p.bookTitle #{books[2].title} by #{books[2].authors}
-				.three.columns.book
-					a(href=`${books[3].url}`, target='_blank')
-						img.bookCoverWide(src=`${books[3].cover}`, alt=`#{books[3].title}`)
-						p.bookTitle #{books[3].title} by #{books[3].authors}
-		.footer
-			p Copyright © #{year} Artem Rosnovskiy
-				br 
-				| Online since 1996
+		.location
+			p 
+				a(href=`https://www.google.com/maps/place/${locations.current.venue}/@${locations.current.lat},${locations.current.lng},15z`) #{locations.current.venue}
+			| #{locations.current.city}, #{locations.current.state}
+		
+		.insert
+			h3 Tech
+			p.tech This site runs as a 
+				span.highlighter Node.js
+				|  application, featuring 
+				span.highlighter Express, Pug and Stylus
+				|  as well as gulp with nodemon and browser-sync for development convenience. The app makes asynchronus requests to Foursquare and Google Maps Static APIs using 
+				span.highlighter async/await
+				|  and some ES2015 (aka ES6) beauty. It tracks my last Swarm check-in, adds a venue name with a map link and points the location on a map.
+
+		.next
+			h2 What else can you do? >
 
