@@ -4,5 +4,5 @@ exports.getPortfolio = (req, res) => {
 };
 
 exports.getResume = (req, res) => {
-	res.download('./public/artem-rosnovskiy-web-developer.pdf');
+	res.download('./public/artem-rosnovskiy-full-stack.pdf');
 };

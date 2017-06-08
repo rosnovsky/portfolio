@@ -40,6 +40,14 @@ describe('Routes', function() {
 		request(app)
 	      .get('/status')
 	      .expect(200, done);
+	  	});
+	});
+	
+	describe('GET resume file and return 200', function() {
+	  it('responds with 200', function(done) {
+		request(app)
+	      .get('/artem-rosnovskiy-full-stack.pdf')
+	      .expect(200, done);
 	    done();
 	  	});
 	});
