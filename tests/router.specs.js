@@ -23,7 +23,8 @@ describe('Routes', function() {
 	  it('responds with 200', function(done) {
 		request(app)
 	      .get('/')
-	      .expect(200, done);
+	      .expect(200);
+	      done()
 	  });
 	});
 
@@ -31,7 +32,8 @@ describe('Routes', function() {
 	  it('responds with 404', function(done) {
 		request(app)
 	      .get('/wrongURL')
-	      .expect(404, done);
+	      .expect(404);
+	    done()
 	  	});
 	});
 
@@ -39,7 +41,8 @@ describe('Routes', function() {
 	  it('responds with 200', function(done) {
 		request(app)
 	      .get('/status')
-	      .expect(200, done);
+	      .expect(200);
+	      done()
 	  	});
 	});
 	
@@ -47,8 +50,8 @@ describe('Routes', function() {
 	  it('responds with 200', function(done) {
 		request(app)
 	      .get('/artem-rosnovskiy-full-stack.pdf')
-	      .expect(200, done);
+	      .expect(200);
 	    done();
 	  	});
 	});
-})
+});
