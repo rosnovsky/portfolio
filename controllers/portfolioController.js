@@ -33,11 +33,8 @@ exports.getPortfolio = async (req, res) => {
 				"cover": bookData.volumeInfo.imageLinks.thumbnail,
 				"url": bookData.volumeInfo.previewLink
 			}
-	
-
 			
 			books[i] = book; 			
-			console.log(books);
 		}
 		return books;
 	}
