@@ -5,7 +5,7 @@
 
 ## Portfolio and Showcase
 
-Here's my portfolio and showcase project. It's been in the works for a year or so, and it's quite work in progress still. You can rewind the history of the pages and the tool to see its evolution, but I'd suggest just exploring the current version. 
+Here's my portfolio and showcase project. It is available live online at [rosnovsky.us](https://rosnovsky.us). It's been in the works for a year or so, and it's quite work in progress still. You can rewind the history of the pages and the tool to see its evolution, but I'd suggest just exploring the current version. 
 
 ## Tech
 
