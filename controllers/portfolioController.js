@@ -3,7 +3,7 @@ const fetch = require('node-fetch');
 exports.getPortfolio = async (req, res) => {
 	const year = new Date().getFullYear();
 
-	const getBook = async (bookID) => {
+	const getBooks = async (bookID) => {
 		//Google Books API volume request
 		const url = 'https://www.googleapis.com/books/v1/users/109765411434313905037/bookshelves/3/volumes';
 		
@@ -12,33 +12,39 @@ exports.getPortfolio = async (req, res) => {
 
 		//parsing the book object
 		const shelfData =  await result.json();
-		const bookData = shelfData.items[0];
-		
+		const booksData = shelfData.items;
+		const booksOnShelf = shelfData.totalItems;
+		let books = new Array;
 
-		let authorsList = [...bookData.volumeInfo.authors];
-		
-		if(authorsList.length >= 3){
-			authorsList = [...bookData.volumeInfo.authors].slice(',').join(", ");
-		}
-		else {
-			authorsList = [...bookData.volumeInfo.authors].slice(',').join(" and ");	
-		}
-		
+		for (i=0; i<booksOnShelf; i++) {
+			let bookData = booksData[i];
+			let authorsList = [...bookData.volumeInfo.authors];
+	
+			if(authorsList.length >= 3){
+				authorsList = [...bookData.volumeInfo.authors].slice(',').join(", ");
+			}
+			else {
+				authorsList = [...bookData.volumeInfo.authors].slice(',').join(" and ");	
+			}
 
-		//Combining book object
-		const book = {
-			"title": bookData.volumeInfo.title,
-			"authors": authorsList,
-			"cover": bookData.volumeInfo.imageLinks.thumbnail,
-			"url": bookData.volumeInfo.previewLink
-		}
-		
-		return book;	
-		}
+			let book = {
+				"title": bookData.volumeInfo.title,
+				"authors": authorsList,
+				"cover": bookData.volumeInfo.imageLinks.thumbnail,
+				"url": bookData.volumeInfo.previewLink
+			}
+	
 
-	const book = await getBook();
+			
+			books[i] = book; 			
+			console.log(books);
+		}
+		return books;
+	}
 
-	res.render('index', { title : "Artem Rosnovskiy — Web Developer", year, book });
+	const books = await getBooks();
+
+	res.render('index', { title : "Artem Rosnovskiy — Web Developer", year, books });
 };
 
 exports.getResume = (req, res) => {

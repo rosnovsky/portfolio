@@ -51,21 +51,21 @@ block content
 					h4 Current Reading
 			.row.books
 				.three.columns.book
-					a(href='http://amzn.to/2kNy9od', target='_blank')
-						img.bookCoverWide(src='images/51zFTdNilAL.jpg', alt='Eloquent JavaScript: A Modern Introduction to Programming')
-						p.bookTitle Eloquent JavaScript: A Modern Introduction to Programming
+					a(href=`${books[0].url}`, target='_blank')
+						img.bookCoverWide(src=`${books[0].cover}`, alt=`#{books[0].title}`)
+						p.bookTitle #{books[0].title} by #{books[0].authors}
 				.three.columns.book
-					a(href='http://amzn.to/2klA7O5', target='_blank')
-						img.bookCover(src='images/41EOlL+w6KL.jpg', alt='Blink')
-						p.bookTitle Blink: The Power of Thinking Without Thinking
+					a(href=`${books[1].url}`, target='_blank')
+						img.bookCoverWide(src=`${books[1].cover}`, alt=`#{books[1].title}`)
+						p.bookTitle #{books[1].title} by #{books[1].authors}
 				.three.columns.book
-					a(href='http://amzn.to/2l2ArhX', target='_blank')
-						img.bookCover(src='images/51KWpTOBMcL.jpg', alt='Team of Rivals: The Political Genius of Abraham Lincoln')
-						p.bookTitle Team of Rivals: The Political Genius of Abraham Lincoln
+					a(href=`${books[2].url}`, target='_blank')
+						img.bookCoverWide(src=`${books[2].cover}`, alt=`#{books[2].title}`)
+						p.bookTitle #{books[2].title} by #{books[2].authors}
 				.three.columns.book
-					a(href='http://amzn.to/2l2xcaq', target='_blank')
-						img.bookCover(src='images/41BQZYCzzqL.jpg', alt='Dreamland')
-						p.bookTitle Dreamland: Adventures in the Strange Science of Sleep
+					a(href=`${books[3].url}`, target='_blank')
+						img.bookCoverWide(src=`${books[3].cover}`, alt=`#{books[3].title}`)
+						p.bookTitle #{books[3].title} by #{books[3].authors}
 		.footer
 			p Copyright © #{year} Artem Rosnovskiy
 				br 
