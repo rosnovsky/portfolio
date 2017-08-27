@@ -4,31 +4,41 @@ block content
 	.container
 		.navbar
 			h1.title @rosnovsky / web dev
-
-		.header(style=`background-image:url('${mapUrl}');background-size:cover`)
-			
-		.square
-			span.here I'm 
-				br 
-				| here
-			
-		.map
-		
-		.location
-			p 
-				a(href=`https://www.google.com/maps/place/${locations.current.venue}/@${locations.current.lat},${locations.current.lng},15z`) #{locations.current.venue}
-			| #{locations.current.city}, #{locations.current.state}
 		
 		.insert
 			h3 Tech
-			p.tech This site runs as a 
-				span.highlighter Node.js
-				|  application, featuring 
-				span.highlighter Express, Pug and Stylus
-				|  as well as gulp with nodemon and browser-sync for development convenience. The app makes asynchronus requests to Foursquare and Google Maps Static APIs using 
-				span.highlighter async/await
-				|  and some ES2015 (aka ES6) beauty. It tracks my last Swarm check-in, adds a venue name with a map link and points the location on a map.
+			
+			p.tech I'm a Web Developer from Seattle, WA. Here's a quick status update. 
+			
+			p.tech I'm at 
+				span.highlighter #{locations.current.venue}
+				|  in #{locations.current.city}, #{locations.current.state}
+				| , or at least that's where I checked-in last. According to Fitbit, today I've made 
+				span.highlighter #{fitbitSteps}
+				|  steps. In the last 7 days, I've coded 
+				span.highlighter #{codingTime.weekly}
+				|  in 
+				span.highlighter #{codingTime.language}
+				|  and 
+				span.highlighter #{codingTime.languageRunnerUp}
+				| , using 
+				span.highlighter VS Code
+				|  mostly. When I'm not coding, I read, and my current book is #{book.title} by #{book.authors}.
+			
+			p.tech This is a simple status app is made with Node, Express, Pug, Stylus, React, Redux, and uses Fitbit, Foursquare, Wakatime APIs, and Google Books.
 
-		.next
-			h2 What else can you do? >
+			p.tech Here's my 
+				span.highlighter Github
+				|  account, updated resume, and Instagram account. 
 
+			h4 Here's where I stand professionally:
+			
+			p
+				strong Web dev
+				| : HTML5, CSS3, Javascript (ES2015), React, Pug/Jade, Stylus, Node.js, Express, jQuery, gulp, Webpack, npm, Sass, Bootstrap, git, bash, Apache, nginx, PHP, MySQL, SSL
+			p
+				strong Design and Media
+				| : Adobe Photoshop, Illustrator, AfterEffects, Premier Pro, Dreamweaver, Flash (including ActionScript), Audition, Sketch by Bohemian, Adobe Experience Manager (AEM)
+			p
+				strong In Progress
+				| : Redux, MongoDB, Docker

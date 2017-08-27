@@ -38,20 +38,6 @@ body {
   margin-left: 52rem;
   font-weight: 400;
 }
-.square {
-  position: relative;
-  left: 350px;
-  top: -125px;
-  width: 300px;
-  height: 300px;
-  background-color: rgba(250,220,76,0.85);
-  text-align: right;
-}
-.location {
-  font-size: 2.5rem;
-  line-height: 2rem;
-  margin-bottom: 2rem;
-}
 a {
   color: #000;
 }
@@ -75,12 +61,11 @@ h3 {
 }
 .insert {
   width: 570px;
-  height: 200px;
   padding: 15px;
   top: -200;
   border: 1px solid #979797;
   margin-bottom: 2rem;
-  line-height: 1.4rem;
+  line-height: 1.2rem;
 }
 .next {
   text-align: center;
