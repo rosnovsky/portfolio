@@ -6,12 +6,10 @@ block content
 			h1.title @rosnovsky / web dev
 		
 		.insert
-			h3 Tech
-			
 			p.tech I'm a Web Developer from Seattle, WA. Here's a quick status update. 
 			
 			p.tech I'm at 
-				span.highlighter #{locations.current.venue}
+				strong #{locations.current.venue}
 				|  in #{locations.current.city}, #{locations.current.state}
 				| , or at least that's where I checked-in last. According to Fitbit, today I've made 
 				span.highlighter #{fitbitSteps}
@@ -23,9 +21,11 @@ block content
 				span.highlighter #{codingTime.languageRunnerUp}
 				| , using 
 				span.highlighter VS Code
-				|  mostly. When I'm not coding, I read, and my current book is #{book.title} by #{book.authors}.
+				|  mostly. When I'm not coding, I read, and my current book is 
+				a(href=`${book.url}`, target='_blank') #{book.title}
+				|  by #{book.authors}.
 			
-			p.tech This is a simple status app is made with Node, Express, Pug, Stylus, React, Redux, and uses Fitbit, Foursquare, Wakatime APIs, and Google Books.
+			p.tech This a simple status app is made with Node, Express, Pug, Stylus, React, Redux, and uses Fitbit, Foursquare, Wakatime, and Google Books APIs.
 
 			p.tech Here's my 
 				span.highlighter Github
@@ -35,7 +35,7 @@ block content
 			
 			p
 				strong Web dev
-				| : HTML5, CSS3, Javascript (ES2015), React, Pug/Jade, Stylus, Node.js, Express, jQuery, gulp, Webpack, npm, Sass, Bootstrap, git, bash, Apache, nginx, PHP, MySQL, SSL
+				| : HTML5, CSS3, Javascript (ES6), React, Pug/Jade, Stylus, Node.js, Express, jQuery, gulp, Webpack, npm, Sass, Bootstrap, git, bash, Apache, nginx, PHP, MySQL, SSL
 			p
 				strong Design and Media
 				| : Adobe Photoshop, Illustrator, AfterEffects, Premier Pro, Dreamweaver, Flash (including ActionScript), Audition, Sketch by Bohemian, Adobe Experience Manager (AEM)
