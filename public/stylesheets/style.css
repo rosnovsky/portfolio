@@ -1,6 +1,6 @@
 @import 'https://fonts.googleapis.com/css?family=PT+Mono:400,900';
 body {
-  font-family: 'PT Mono', sans-serif;
+  font-family: 'PT Mono', 'Futura', sans-serif;
   min-width: 100vw;
   min-height: 100vh;
   display: flex;
@@ -44,15 +44,6 @@ a {
 .highlighter {
   background-color: #fadc4c;
 }
-.here {
-  position: relative;
-  font-family: 'Futura', 'PT Mono', sans-serif;
-  font-size: 4rem;
-  font-weight: thin;
-  top: 8.2rem;
-  right: 1.2rem;
-  line-height: 5rem;
-}
 h3 {
   font-weight: thin;
   font-size: 1.2rem;
@@ -62,10 +53,8 @@ h3 {
 .insert {
   width: 570px;
   padding: 15px;
-  top: -200;
-  border: 1px solid #979797;
   margin-bottom: 2rem;
-  line-height: 1.2rem;
+  line-height: 1.3rem;
 }
 .next {
   text-align: center;
