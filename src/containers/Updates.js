@@ -8,7 +8,7 @@ export default class Footer extends Component {
         <div className="updates container-fluid row justify-content-md-center">
           <div className="location col-12 col-md-auto">
             <div className="icon"><img src="../images/swarm.png" alt="swarm logo" /></div>
-            Currently at <br /><p className="data">SportCuts</p><br />in Bothell, WA
+            <p className="data">SportCuts</p><br />latest check-in
           </div>
           <div className="fitness col-12 col-md-auto">
           <div className="icon"><img src="../images/fitbit.png" alt="fitbit logo" /></div>

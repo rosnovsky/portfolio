@@ -52,6 +52,13 @@ p {
   margin-bottom: 2em;
 }
 
+.status {
+  vertical-align: middle;
+  height: 1em;
+  padding-right: 2px;
+  padding-bottom: 3px;
+}
+
 .updates {
   display: flex;
 }

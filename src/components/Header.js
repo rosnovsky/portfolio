@@ -13,7 +13,7 @@ render() {
           </div>
           
           <div className="row justify-content-md-center"> 
-          <p> <span role="img" aria-label="Blue Avialability Icon">🔵</span> Available for hire</p>
+          <p> <img src="../images/status.gif" className="status" /> Available for hire</p>
         </div>
       </div>
     )
