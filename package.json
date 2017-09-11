@@ -1,36 +1,20 @@
 {
   "name": "rosnovsky-us",
-  "version": "3.0.0-alpha",
-  "engines": {
-    "node": ">= 7.6.0"
-  },
+  "version": "0.1.0",
   "private": true,
-  "scripts": {
-    "test": "mocha tests/*.js",
-    "dev": "gulp",
-    "start": "gulp stylus && node ./bin/www"
-  },
   "dependencies": {
-    "body-parser": "~1.17.1",
-    "completion": "^1.0.1",
-    "cookie-parser": "~1.4.3",
-    "debug": "~2.6.3",
-    "dotenv": "^4.0.0",
-    "es6-promisify": "^5.0.0",
-    "express": "~4.15.2",
-    "moment": "^2.18.1",
-    "morgan": "~1.8.1",
-    "node-fetch": "^1.6.3",
-    "pug": "~2.0.0-beta11",
-    "serve-favicon": "~2.4.2"
+    "lodash": "^4.17.4",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-redux": "^5.0.6",
+    "react-scripts": "1.0.13",
+    "redux": "^3.7.2",
+    "redux-promise": "^0.5.3"
   },
-  "devDependencies": {
-    "browser-sync": "^2.18.12",
-    "gulp": "^3.9.1",
-    "gulp-nodemon": "^2.2.1",
-    "gulp-stylus": "^2.6.0",
-    "gulp-watch": "^4.3.11",
-    "mocha": "^3.4.2",
-    "supertest": "^3.0.0"
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
   }
 }
