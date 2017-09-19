@@ -6,7 +6,7 @@ router.get('/', async (req, res, next) => {
 
 	try{
 		getLocation = async () => {
-			const url = process.env.FOURSQUARE;
+			const url = "https://api.foursquare.com/v2/users/self/checkins?oauth_token=0K1NE32WDGL13KRGAX1ME1HVGOQFEV5XDUQQN22AZENSUKRT&v=20170915";
 
 			const result = await fetch(url);
 			const locationResult = await result.json();
@@ -47,9 +47,9 @@ try {
 
 	try{
 		getSteps = async () => {
-			const url = "https://api.fitbit.com/1/user/-/activities/date/today.json";
+			const url = "https://wakatime.com/api/v1/users/rosnovsky/stats/last_7_days?api_key=c2a77dad-8d50-4d6b-9312-fc77060504c0";
 
-			const fitbitAuth = process.env.FITBIT;
+			const fitbitAuth = "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyMjZQUzUiLCJhdWQiOiIyMjhIUksiLCJpc3MiOiJGaXRiaXQiLCJ0eXAiOiJhY2Nlc3NfdG9rZW4iLCJzY29wZXMiOiJyc29jIHJzZXQgcmFjdCBybG9jIHJ3ZWkgcmhyIHJudXQgcnBybyByc2xlIiwiZXhwIjoxNTI2NDQ2NzE1LCJpYXQiOjE0OTQ5MTE1MDN9.0ZrgzGxN-jMJXDAAX_tCuob14Lu12-rE1oFKvaSNpTY";
 			
 
 			const opts = {
