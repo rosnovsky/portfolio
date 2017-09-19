@@ -1,10 +1,10 @@
-const express = require('express');
-const router = express.Router();
-const statusController = require('../controllers/statusController');
+var express = require('express');
+var path = require('path');
+var router = express.Router();
 
-// const { catchErrors } = require('../handlers/errorHandlers');
-
-// Do work here
-router.get('/', statusController.getStatus);
+/* GET home page. */
+router.get('/', function(req, res, next) {
+  res.sendFile(path.resolve(__dirname, "../client/build/index.html"));
+});
 
 module.exports = router;

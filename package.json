@@ -1,37 +1,27 @@
 {
-  "name": "rosnovsky-us",
-  "version": "3.0.0-alpha",
-  "engines": {
-    "node": ">= 7.6.0"
-  },
+  "name": "react-backend",
+  "version": "0.0.0",
   "private": true,
+  "engines": {
+    "node": "8.1.1",
+    "npm": "5.0.3"
+  },
   "scripts": {
-    "test": "mocha tests/*.js",
-    "dev": "gulp",
-    "start": "gulp stylus && node ./bin/www"
+    "start": "node ./bin/www",
+    "heroku-postbuild": "cd client && yarn --production=false && yarn run build"
   },
   "dependencies": {
     "body-parser": "~1.17.1",
-    "completion": "^1.0.1",
     "cookie-parser": "~1.4.3",
-    "critical": "^0.8.4",
     "debug": "~2.6.3",
     "dotenv": "^4.0.0",
     "es6-promisify": "^5.0.0",
     "express": "~4.15.2",
-    "moment": "^2.18.1",
+    "fetch": "^1.1.0",
+    "jade": "~1.11.0",
     "morgan": "~1.8.1",
-    "node-fetch": "^1.6.3",
-    "pug": "~2.0.0-beta11",
-    "serve-favicon": "~2.4.2"
-  },
-  "devDependencies": {
-    "browser-sync": "^2.18.12",
-    "gulp": "^3.9.1",
-    "gulp-nodemon": "^2.2.1",
-    "gulp-stylus": "^2.6.0",
-    "gulp-watch": "^4.3.11",
-    "mocha": "^3.4.2",
-    "supertest": "^3.0.0"
+    "node-fetch": "^1.7.3",
+    "serve-favicon": "~2.4.2",
+    "yarn": "^1.0.2"
   }
 }
