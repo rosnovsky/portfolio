@@ -47,7 +47,7 @@ try {
 
 	try{
 		getSteps = async () => {
-			const url = "https://api.fitbit.com/1/user/-/activities/date/today.json;
+			const url = "https://api.fitbit.com/1/user/-/activities/date/today.json";
 
 			const fitbitAuth = "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyMjZQUzUiLCJhdWQiOiIyMjhIUksiLCJpc3MiOiJGaXRiaXQiLCJ0eXAiOiJhY2Nlc3NfdG9rZW4iLCJzY29wZXMiOiJyc29jIHJzZXQgcmFjdCBybG9jIHJ3ZWkgcmhyIHJudXQgcnBybyByc2xlIiwiZXhwIjoxNTI2NDQ2NzE1LCJpYXQiOjE0OTQ5MTE1MDN9.0ZrgzGxN-jMJXDAAX_tCuob14Lu12-rE1oFKvaSNpTY";
 			
