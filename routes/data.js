@@ -6,7 +6,7 @@ router.get('/', async (req, res, next) => {
 
 	try{
 		getLocation = async () => {
-			const url = "https://api.foursquare.com/v2/users/self/checkins?oauth_token=0K1NE32WDGL13KRGAX1ME1HVGOQFEV5XDUQQN22AZENSUKRT&v=20170915";
+			const url = "https://api.foursquare.com/v2/users/self/checkins?oauth_token=0K1NE32WDGL13KRGAX1ME1HVGOQFEV5XDUQQN22AZENSUKRT&v=20170922";
 
 			const result = await fetch(url);
 			const locationResult = await result.json();
