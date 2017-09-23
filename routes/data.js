@@ -71,7 +71,7 @@ try {
 
 		try {
 		 getCode = async () => {
-			const url = "https://wakatime.com/api/v1/users/rosnovsky/stats/last_7_days?api_key=c2a77dad-8d50-4d6b-9312-fc77060504c0";
+			const url = "https://wakatime.com/api/v1/users/rosnovsky/stats/last_7_days?api_key=8bf69425-a660-4147-9227-12e2b45e0d38";
 	
 			const result = await fetch(url);
 			const codeResult = await result.json();
