@@ -45,30 +45,6 @@ try {
 		return res.status(500).send()
 	}
 
-	try{
-		getSteps = async () => {
-			const url = "https://api.fitbit.com/1/user/-/activities/date/today.json";
-
-			const fitbitAuth = "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyMjZQUzUiLCJhdWQiOiIyMjhIUksiLCJpc3MiOiJGaXRiaXQiLCJ0eXAiOiJhY2Nlc3NfdG9rZW4iLCJzY29wZXMiOiJyc29jIHJzZXQgcmFjdCBybG9jIHJ3ZWkgcmhyIHJudXQgcnBybyByc2xlIiwiZXhwIjoxNTI2NDQ2NzE1LCJpYXQiOjE0OTQ5MTE1MDN9.0ZrgzGxN-jMJXDAAX_tCuob14Lu12-rE1oFKvaSNpTY";
-			
-
-			const opts = {
-				method: 'GET',
-			headers: {"Authorization" : fitbitAuth }
-		};
-	
-			const result = await fetch(url, opts);
-			const stepsResult = await result.json();
-			const stepsData = {
-					count: stepsResult.summary.steps
-				};
-			
-				return stepsData;
-		}
-	} catch (err) {
-		return res.status(500).send()
-	}
-
 		try {
 		 getCode = async () => {
 			const url = "https://wakatime.com/api/v1/users/rosnovsky/stats/last_7_days?api_key=8bf69425-a660-4147-9227-12e2b45e0d38";
@@ -92,7 +68,6 @@ try {
 
 	const book = await getBook();
 	const location = await getLocation();
-	const steps = await getSteps();
 	const coding = await getCode();
 
 
@@ -100,7 +75,6 @@ try {
 		{
 			location,
 			book, 
-			steps,
 			coding
 		});
 });

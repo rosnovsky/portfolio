@@ -23,11 +23,6 @@ state = { data:
       cover: "img.png",
       url: "#"
     },
-
-    steps: {
-      count: "Looking on Fitbit..."
-    },
-    
     coding: {
       weekly: "Pinging Wakatime",
       dailyAverage: "hours and hours",
@@ -48,7 +43,7 @@ state = { data:
     return (
       <div className="container">
         <Header />
-        <Updates location={this.state.data.location} book={this.state.data.book} coding={this.state.data.coding} steps={this.state.data.steps} />
+        <Updates location={this.state.data.location} book={this.state.data.book} coding={this.state.data.coding} />
         <Intro />
         <Footer />
       </div>
