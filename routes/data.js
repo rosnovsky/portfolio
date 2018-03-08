@@ -10,7 +10,6 @@ router.get('/', async (req, res, next) => {
 
 			const result = await fetch(url);
 			const locationResult = await result.json();
-			console.log(`Here's the raw result of 4SQ request: ${locationResult}`);
 			const locationData = {
 					"venue": locationResult.response.checkins.items[0].venue.name,
 					"city": locationResult.response.checkins.items[0].venue.location.city,
