@@ -6,7 +6,7 @@ router.get('/', async (req, res, next) => {
 
 	try{
 		getLocation = async () => {
-			const url = env.production.FOURSQUARE;
+			const url = "https://api.foursquare.com/v2/users/self/checkins?oauth_token=0K1NE32WDGL13KRGAX1ME1HVGOQFEV5XDUQQN22AZENSUKRT&v=20180307";
 
 			const result = await fetch(url);
 			const locationResult = await result.json();
@@ -47,7 +47,7 @@ try {
 
 		try {
 		 getCode = async () => {
-			const url = env.production.WAKATIME;;
+			const url = "https://wakatime.com/api/v1/users/rosnovsky/stats/last_7_days?api_key=8bf69425-a660-4147-9227-12e2b45e0d38";
 	
 			const result = await fetch(url);
 			const codeResult = await result.json();
