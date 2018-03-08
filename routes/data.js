@@ -52,11 +52,7 @@ try {
 			const codeResult = await result.json();
 			const codeData = {
 				
-					weekly: codeResult.data.human_readable_total,
-					dailyAverage: codeResult.data.human_readable_daily_average,
-					language: codeResult.data.languages[0].name,
-					languageRunnerUp: codeResult.data.languages[1].name
-				
+				weekly: codeResult.data.human_readable_total,
 			};
 				
 				return codeData;
